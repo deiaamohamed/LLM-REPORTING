@@ -1,8 +1,8 @@
 # BioMedCLIP MRI Tumor Captioning — v1.2
 
-**Version:** 1.2\
-**Model Used:** `microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224`\
-**Framework:** OpenCLIP\
+**Version:** 1.2  
+**Model Used:** `microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224`  
+**Framework:** OpenCLIP  
 **Author:** Deiaa Mohamed
 
 ---
@@ -36,36 +36,37 @@ The purpose is to improve explainability and diagnostic interpretation by pairin
 
 - Integrated with OpenRouter.ai to generate medical reports using:
   - Primary model: `mistral-7b-instruct`
-  - Fallback model: `mistral-deverst-small` (used if the primary fails)
+  - Fallback model: `mistral-deverst-small`
 
 ---
 
 ## How It Works
 
-1. **Input:**\
+1. **Input:**  
    A grayscale brain MRI image overlaid with a red tumor segmentation heatmap.
 
-2. **Encoding with BioMedCLIP:**\
+2. **Encoding with BioMedCLIP:**  
    The image is encoded using BioMedCLIP’s visual encoder. A fixed set of medical captions is encoded with the text encoder.
 
-3. **Caption Matching:**\
+3. **Caption Matching:**  
    The cosine similarity is calculated between the image and each caption. The caption with the highest normalized confidence score is selected.
 
-4. **Report Generation:**\
-   The selected caption is sent to an API (OpenRouter.ai), which uses `mistral-7b-instruct` or `mistral-deverst-small` to generate a full diagnostic-style report.
+4. **Report Generation:**  
+   The selected caption is sent to OpenRouter.ai, which uses `mistral-7b-instruct` or `mistral-deverst-small` to generate a full diagnostic-style report.
 
 ---
 
-### Example
+## Example
 
-**Input:**\
+**Input:**  
 MRI scan of the brain with a segmented tumor in the left temporal lobe.
 
 **System Output:**
 
-- Caption:\
+- **Caption:**  
   `The MRI indicates presence of a glioma tumor in the temporal lobe.`
-- Generated Report:\
+
+- **Generated Report:**  
   `This MRI scan reveals a glioma located in the temporal region, likely causing localized compression. Further evaluation with contrast-enhanced imaging is recommended.`
 
 ---
@@ -106,7 +107,7 @@ Further evaluation with contrast-enhanced imaging is recommended.
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 BioMedCLIP-Captioning/
@@ -121,7 +122,7 @@ BioMedCLIP-Captioning/
 
 ---
 
-## Notes
+## ⚠️ Notes
 
 - The pipeline works best with segmented images that clearly highlight tumor regions using red overlays.
 - The generated caption is intended to aid interpretation, not replace expert diagnosis.
@@ -129,13 +130,14 @@ BioMedCLIP-Captioning/
 
 ---
 
-## Contact
+## 📬 Contact
 
-**Deiaa Mohamed**\
-Email: [[deiaa100g@gmail.com](mailto\:your_email@example.com)]\
-GitHub: [[https://github.com/deiaamohamed/](https://github.com/deiaamohamed/)]
+**Deiaa Mohamed**  
+Email: [deiaa100g@gmail.com](mailto:deiaa100g@gmail.com)  
+🔗 GitHub: [https://github.com/deiaamohamed](https://github.com/deiaamohamed)
 
 ---
+
 
 
 
