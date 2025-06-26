@@ -111,12 +111,9 @@ Further evaluation with contrast-enhanced imaging is recommended.
 
 ```
 BioMedCLIP-Captioning/
-├── data/                  # Sample MRI scans
-├── captions.txt           # Medical caption templates
-├── models/                # BioMedCLIP wrappers
-├── api/                   # Report generation API logic
-├── caption_image.py       # Main entry script
-├── utils.py               # Preprocessing and similarity functions
+├── data/                  # Sample MRI scans (not included currently due to privacy of my data)
+├── models/                # BioMedCLIP wrappers (you can download it from Hugging Face after they accept your request,t so I can't upload it without permission)
+├── BioMedClip.py          # Main entry script
 └── requirements.txt       # Required libraries
 ```
 
@@ -133,8 +130,8 @@ BioMedCLIP-Captioning/
 ## 📬 Contact
 
 **Deiaa Mohamed**  
-Email: [deiaa100g@gmail.com](mailto:deiaa100g@gmail.com)  
-🔗 GitHub: [https://github.com/deiaamohamed](https://github.com/deiaamohamed)
+   Email: [deiaa100g@gmail.com](mailto:deiaa100g@gmail.com)  
+   GitHub: [https://github.com/deiaamohamed](https://github.com/deiaamohamed)
 
 ---
 
