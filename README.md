@@ -1,28 +1,51 @@
-# BioMedCLIP MRI Tumor Captioning — v1.2
 
-**Version:** 1.2  
-**Model Used:** `microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224`  
-**Framework:** OpenCLIP  
-**Author:** Deiaa Mohamed
+# ߧ MRI_Analysis - Django Web Application
 
----
+**MRI_Analysis** is a Django-based web application designed for local development using a virtual environment, SQLite database, and support for media uploads.
 
-## Project Overview
+## ߓ Tech Stack
+- Python 3.8+
+- Django 5.1.3
+- SQLite (default database)
+- Pillow (image processing)
+- Django Extensions (for helpful dev tools)
 
-This repository contains a pipeline that generates diagnostic-style captions for grayscale brain MRI images with red heatmaps indicating segmented tumor regions. The captions are selected based on similarity between the image and a curated list of clinical descriptions using BioMedCLIP.
+##  ߚGetting Started
 
----
+### 1. Activate Virtual Environment
+    env\Scripts\activate
 
-## What Was Changed in v1.2
+> If `env` doesn't exist, create it first:
+    python -m venv env
+    env\Scripts\activate
 
-### 1. Rewriting and Expanding Caption Labels
-- Replaced vague or repetitive labels (e.g., “a tumor is a mass that is a tumor”) with clearer, domain-specific phrasing.
-- Split the label list into two logical groups:
-  - Tumor-present cases (e.g., glioma, meningioma, pituitary)
-  - Tumor-absent cases (e.g., healthy brain MRI without heatmaps)
-- Added 8 new “no tumor” captions to make the classifier recognize clean scans.
+### 2. Install Dependencies
+    pip install django
+    pip install pillow
+    pip install django-extensions
 
-### 2. Improving the Similarity Scoring
-- Replaced raw similarity calculation with a normalized version:
-  ```python
-  confidence = (similarity_score + 1) / 2
+### 3. Run Migrations
+    python manage.py makemigrations
+    python manage.py migrate
+
+### 4. Create Superuser (optional)
+    python manage.py createsuperuser
+
+### 5. Run Development Server
+    python manage.py runserver
+
+Visit the app at: http://127.0.0.1:8000
+
+
+
+## ߓ Resources
+- https://docs.djangoproject.com/en/5.1/
+
+- https://pillow.readthedocs.io/
+- https://django-extensions.readthedocs.io/
+
+## ✅ Final Notes
+- Always activate the environment before running the server.
+- Admin login: http://127.0.0.1:8000/admin
+
+Happy Coding! ߚ
