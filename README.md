@@ -51,7 +51,7 @@ The purpose is to improve explainability and diagnostic interpretation by pairin
 3. **Caption Matching:**\
    The cosine similarity is calculated between the image and each caption. The caption with the highest normalized confidence score is selected.
 
-4. **Optional Report Generation:**\
+4. **Report Generation:**\
    The selected caption is sent to an API (OpenRouter.ai), which uses `mistral-7b-instruct` or `mistral-deverst-small` to generate a full diagnostic-style report.
 
 ---
@@ -132,21 +132,10 @@ BioMedCLIP-Captioning/
 ## Contact
 
 **Deiaa Mohamed**\
-Email: [[your\_email@example.com](mailto\:your_email@example.com)]\
-GitHub: [[https://github.com/yourusername](https://github.com/yourusername)]
+Email: [[deiaa100g@gmail.com](mailto\:your_email@example.com)]\
+GitHub: [[https://github.com/deiaamohamed/](https://github.com/deiaamohamed/)]
 
 ---
 
-## Citation
 
-If you use this work or build on it, please cite:
-
-```bibtex
-@misc{biomedclip2023,
-  title={BioMedCLIP: Medical Vision-Language Pretraining},
-  author={Microsoft Research},
-  year={2023},
-  url={https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224}
-}
-```
 
